@@ -1,0 +1,177 @@
+/* ПЕРЕМЕННЫЕ */
+:root {
+  --pink: #FF6EFD;
+  --blue: #1C39FF;
+  --yellow: #FED700;
+  --white: #FFF;
+  --black: #000;
+}
+/* КУРСОР */
+html {
+cursor: crosshair;
+}
+/* СТИЛИ ТЕКСТА */
+h1 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  font-size: 128px;
+  color: var(--white);
+}
+h2 {
+  font-family: 'IBM Plex Mono';
+  font-weight: 400;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+p {
+  font-family: 'IBM Plex Mono';
+  font-weight: 400;
+  font-size: 20px;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background: var(--blue);
+}
+svg {
+  max-width: 100%;
+}
+.scene > div {
+  position: absolute;
+  bottom: 0;
+}
+.scene > .flowers1 {
+  width: 100%;
+}
+.scene > .flowers2 {
+  width: 100%;
+}
+.scene > .flowers3 {
+  width: 100%;
+}
+.scene > .flowers4 {
+  width: 100%;
+}
+.fill {
+  z-index: 1;
+}
+.outline {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 3px var(--white);
+  z-index: 100;
+}
+.spring_pink {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.bulb {
+  z-index: 5;
+}
+.object {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  margin: 25% -40%;
+  height: 500px;
+  /* border: 3px solid var(--white); */
+}
+.rgb-slider{
+  width: 42%;
+  margin: 10%;
+  padding: 40px;
+  box-sizing: border-box;
+  background: var(--pink);
+}
+.show-color{
+  width: 30%;
+  height: 200px;
+  border: 3px solid var(--blue);
+  margin: 10%;
+  box-sizing: border-box;
+  background: var(--white);
+}
+
+.color-value{
+  width:95%;
+  margin:10px auto;
+  text-align: center;
+  border:1px solid var(--blue);
+  clear: both;
+  background: black;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+input[type="range"]{
+  width: 80%;
+  margin: auto;
+  height: 30px;
+}
+input[type="text"]{
+  width:500px;
+  margin: auto;
+  font-size: 30px;
+  border:3px solid var(--white);
+  padding: 10px;
+  text-align: center;
+  height: 50px;
+}
+
+p{
+  font-size: 30px;
+  color: rgb(251, 251, 251);
+  padding: 0px;
+  margin: 0px;
+
+}
+
+span{
+  font-size: 50px;
+  margin: 0px 30px;
+}
+
+#screen_1 {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+}
+#screen_2 {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background: url(../img/grid.svg);
+}
+#screen_3 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background: url(../img/grid.svg);
+}
+#screen_2 h1 {
+  position: absolute;
+  top: 10%;
+  text-align: center;
+  animation: heading 10s ease-in-out infinite;
+}
+#screen_3 h1 {
+  position: absolute;
+  top: 15%;
+  text-align: center;
+  animation: heading 10s ease-in-out infinite;
+}
+@keyframes heading {
+  0% {right: 0;}
+  50% {right: 100%;}
+  100% {right: 0;}
