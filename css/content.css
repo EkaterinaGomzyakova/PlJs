@@ -42,16 +42,16 @@ svg {
   bottom: 0;
 }
 .scene > .flowers1 {
-  width: 100%;
+  width: 10%;
 }
 .scene > .flowers2 {
-  width: 100%;
+  width: 10%;
 }
 .scene > .flowers3 {
-  width: 100%;
+  width: 10%;
 }
 .scene > .flowers4 {
-  width: 100%;
+  width: 10%;
 }
 .fill {
   z-index: 1;
@@ -131,7 +131,7 @@ span {
   width: 100px;
   height: 100px;
   z-index: 5;
-  background-image: url(../img/forma.svg);
+  background-image: url(../img/flowers2.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
