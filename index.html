@@ -11,8 +11,102 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.svg">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+  <script type="text/javascript">
+    let numBalls = 50;
+    let spring = 0.05;
+    let gravity = 0.03;
+    let friction = -0.9;
+    let balls = [];
+
+    function setup() {
+      createCanvas(1920, 400);
+      for (let i = 0; i < numBalls; i++) {
+        balls[i] = new Ball(
+          random(width),
+          random(height),
+          random(30, 70),
+          i,
+          balls
+        );
+      }
+      noStroke();
+      fill(255, 155, 111);
+    }
+
+    function draw() {
+      background(0);
+      balls.forEach(ball => {
+        ball.collide();
+        ball.move();
+        ball.display();
+      });
+    }
+
+    class Ball {
+      constructor(xin, yin, din, idin, oin) {
+        this.x = xin;
+        this.y = yin;
+        this.vx = 0;
+        this.vy = 0;
+        this.diameter = din;
+        this.id = idin;
+        this.others = oin;
+      }
+
+      collide() {
+        for (let i = this.id + 1; i < numBalls; i++) {
+          // console.log(others[i]);
+          let dx = this.others[i].x - this.x;
+          let dy = this.others[i].y - this.y;
+          let distance = sqrt(dx * dx + dy * dy);
+          let minDist = this.others[i].diameter / 2 + this.diameter / 2;
+          //   console.log(distance);
+          //console.log(minDist);
+          if (distance < minDist) {
+            //console.log("2");
+            let angle = atan2(dy, dx);
+            let targetX = this.x + cos(angle) * minDist;
+            let targetY = this.y + sin(angle) * minDist;
+            let ax = (targetX - this.others[i].x) * spring;
+            let ay = (targetY - this.others[i].y) * spring;
+            this.vx -= ax;
+            this.vy -= ay;
+            this.others[i].vx += ax;
+            this.others[i].vy += ay;
+          }
+        }
+      }
+
+      move() {
+        this.vy += gravity;
+        this.x += this.vx;
+        this.y += this.vy;
+        if (this.x + this.diameter / 2 > width) {
+          this.x = width - this.diameter / 2;
+          this.vx *= friction;
+        } else if (this.x - this.diameter / 2 < 0) {
+          this.x = this.diameter / 2;
+          this.vx *= friction;
+        }
+        if (this.y + this.diameter / 2 > height) {
+          this.y = height - this.diameter / 2;
+          this.vy *= friction;
+        } else if (this.y - this.diameter / 2 < 0) {
+          this.y = this.diameter / 2;
+          this.vy *= friction;
+        }
+      }
+
+      display() {
+        ellipse(this.x, this.y, this.diameter, this.diameter);
+      }
+    }
+    </script>
   </head>
   <body>
+
     <section id="screen_1">
     <svg width="100%" height="100%" viewBox="30 -50 600 500">
      <path id="path">
@@ -25,16 +119,16 @@
     </svg>
     <div class="scene">
       <div data-offset="90" class="parallax flowers1">
-        <img src="img/flowers1.svg">
+        <img src="img/flowers2.png">
       </div>
       <div data-offset="30" class="parallax flowers2">
-        <img src="img/flowers2.svg">
+        <img src="img/flowers1.png">
       </div>
       <div data-offset="20" class="parallax flowers3">
-        <img src="img/flowers3.svg">
+        <img src="img/flowers1.png">
       </div>
       <div data-offset="50" class="parallax flowers4">
-        <img src="img/flowers4.svg" alt="">
+        <img src="img/flowers1.png" alt="">
       </div>
     </div>
     </section>
@@ -50,20 +144,59 @@
       <h1 class="fill">цвет</h1>
       <img class="bulb" src="img/bulb.png">
       <svg class="object" width="192" height="379" viewBox="0 0 192 379" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path class="plant" fill-rule="evenodd" clip-rule="evenodd" d="M152.548 76.274C152.548 90.6808 148.554 104.155 141.612 115.649C139.822 118.613 141.157 122.615 144.365 123.915C172.299 135.239 192 162.634 192 194.63C192 225.05 174.192 251.31 148.433 263.556C145.699 264.855 144.489 268.17 145.741 270.924C150.113 280.537 152.548 291.217 152.548 302.466C152.548 344.591 118.399 378.74 76.2739 378.74C34.149 378.74 0 344.591 0 302.466C0 272.046 17.8079 245.785 43.5675 233.54C46.3007 232.241 47.5116 228.926 46.2588 226.171C41.8871 216.559 39.4521 205.879 39.4521 194.63C39.4521 180.223 43.4465 166.749 50.3881 155.255C52.1779 152.292 50.8432 148.29 47.6347 146.989C19.7013 135.665 0 108.27 0 76.274C0 34.149 34.149 0 76.2739 0C118.399 0 152.548 34.149 152.548 76.274Z" fill="#FF6EFD"/>
-</svg>
+        <path class="plant" fill-rule="evenodd" clip-rule="evenodd" d="M152.548 76.274C152.548 90.6808 148.554 104.155 141.612 115.649C139.822 118.613 141.157 122.615 144.365 123.915C172.299 135.239 192 162.634 192 194.63C192 225.05 174.192 251.31 148.433 263.556C145.699 264.855 144.489 268.17 145.741 270.924C150.113 280.537 152.548 291.217 152.548 302.466C152.548 344.591 118.399 378.74 76.2739 378.74C34.149 378.74 0 344.591 0 302.466C0 272.046 17.8079 245.785 43.5675 233.54C46.3007 232.241 47.5116 228.926 46.2588 226.171C41.8871 216.559 39.4521 205.879 39.4521 194.63C39.4521 180.223 43.4465 166.749 50.3881 155.255C52.1779 152.292 50.8432 148.29 47.6347 146.989C19.7013 135.665 0 108.27 0 76.274C0 34.149 34.149 0 76.2739 0C118.399 0 152.548 34.149 152.548 76.274Z" fill="#FF6EFD"/>
+      </svg>
       <h1 class="outline">цвет</h1>
-
       <h2>Выбери цвета для растения</h2>
-        <div class="container">
-            <div class="rgb-slider">
-              <p>Красный:</p> <input type="range" max="255" min="0" step="1" class="r"><br>
-              <p>Зелёный:</p> <input type="range" max="255" min="0" step="1" class="g"><br>
-              <p>Синий:</p> <input type="range" max="255" min="0" step="1" class="b"><br>
-            </div>
-
+      <div class="container">
+        <div class="rgb-slider">
+          <p>Красный:</p> <input type="range" max="255" min="0" step="1" class="r"><br>
+          <p>Зелёный:</p> <input type="range" max="255" min="0" step="1" class="g"><br>
+          <p>Синий:</p> <input type="range" max="255" min="0" step="1" class="b"><br>
         </div>
+      </div>
     </section>
 
+    <section id="screen_4">
+      <h1 class="fill">форма</h1>
+      <h1 class="outline">форма</h1>
+      <div class="shapes">
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+        <div class="forma"></div>
+      </div>
+    </section>
+
+    <section id="screen_5">
+      <h1 class="fill">библиотека образцов</h1>
+      <h1 class="outline">библиотека образцов</h1>
+
+
+    </section>
   </body>
 </html>
