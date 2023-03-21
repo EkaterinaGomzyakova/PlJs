@@ -15,40 +15,47 @@
   <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
   </head>
   <body>
-    <section id="screen_1">
+    <div class="menu">
+      <div class="top"></div>
+      <div class="right"></div>
+      <div class="bottom"></div>
+      <div class="left"></div>
+      <div class="center"></div>
+    </div>
+    <section class="screen_1 show">
     <svg width="100%" height="100%" viewBox="30 -50 600 500">
      <path id="path">
         <animate attributeName="d" from="m0,110 h0" to="m0,110 h1100" dur="8s" begin="0s" repeatCount="indefinite"/>
       </path>
       <text font-size="32" font-family="IBM Plex Mono" fill='var(--white)'>
-        <textPath xlink:href="#path">Синтезируем новые растения|
-        </textPath>
+        <textPath xlink:href="#path">Синтезируем новые растения</textPath>
       </text>
     </svg>
     <div class="scene">
-      <div data-offset="90" class="parallax flowers1">
-        <img src="img/flowers2.png">
+      <div data-offset="90" class="parallax">
+        <img class="flowers1" src="img/flowers1.png">
       </div>
-      <div data-offset="30" class="parallax flowers2">
-        <img src="img/flowers1.png">
+      <div data-offset="30" class="parallax">
+        <img class="flowers2" src="img/flowers1.png">
       </div>
-      <div data-offset="20" class="parallax flowers3">
-        <img src="img/flowers1.png">
+      <div data-offset="20" class="parallax">
+        <img class="flowers3" src="img/flowers1.png">
       </div>
-      <div data-offset="50" class="parallax flowers4">
-        <img src="img/flowers2.png" alt="">
+      <div data-offset="50" class="parallax">
+        <img class="flowers4" src="img/flowers1.png" alt="">
       </div>
     </div>
+
     </section>
 
-    <section id="screen_2">
+    <section class="screen_2 hide">
       <h1 class="fill">синтез растений</h1>
-      <img id="box_fruits" src="img/box_fruits.svg">
+      <img class="box_fruits" src="img/box_fruits.svg">
       <img class="spring_pink" src="img/spring_pink.png">
       <h1 class="outline">синтез растений</h1>
     </section>
 
-    <section id="screen_3">
+    <section class="screen_3 hide">
       <h1 class="fill">цвет</h1>
       <img class="bulb" src="img/bulb.png">
       <svg class="object" width="192" height="379" viewBox="0 0 192 379" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,7 +72,7 @@
       </div>
     </section>
 
-    <section id="screen_4">
+    <section class="screen_4 hide">
       <h1 class="fill">форма</h1>
       <h1 class="outline">форма</h1>
       <div class="shapes">
@@ -100,7 +107,7 @@
       </div>
     </section>
 
-    <section id="screen_5">
+    <section class="screen_5 hide">
       <h1 class="fill">библиотека образцов</h1>
       <h1 class="outline">библиотека образцов</h1>
     </section>

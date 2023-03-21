@@ -34,24 +34,21 @@ body {
   height: 100vh;
   background: var(--blue);
 }
-svg {
-  max-width: 100%;
-}
 .scene > div {
   position: absolute;
   bottom: 0;
 }
-.scene > .flowers1 {
-  width: 10%;
+.flowers1 {
+  width: 100%;
 }
-.scene > .flowers2 {
-  width: 10%;
+.flowers2 {
+  width: 100%;
 }
-.scene > .flowers3 {
-  width: 10%;
+.flowers3 {
+  width: 100%;
 }
-.scene > .flowers4 {
-  width: 10%;
+.flowers4 {
+  width: 100%;
 }
 .fill {
   z-index: 1;
@@ -63,13 +60,13 @@ svg {
 }
 .spring_pink {
   position: absolute;
-  width: 1920px;
-  height: 1080px;
+  width: 100vw;
   top: 0;
   left: 0;
   z-index: 5;
 }
 .bulb {
+  width: 40vw;
   z-index: 5;
 }
 .object {
@@ -81,9 +78,8 @@ svg {
   display: flex;
   flex-direction: row;
   width: 40%;
-  margin: 25% -40%;
+  margin: 25% 15%;
   height: 500px;
-  /* border: 3px solid var(--white); */
 }
 .rgb-slider{
   width: 42%;
@@ -122,9 +118,38 @@ p {
   padding: 0px;
   margin: 0px;
 }
-span {
-  font-size: 50px;
-  margin: 0px 30px;
+.menu {
+  position: relative;
+  width: 5.208vw;
+  height: 5.208vw;
+  margin: 1.563vw 0 0 89.583vw;
+}
+.top, .right, .bottom, .left, .center {
+  position: absolute;
+  width: 2vw;
+  height: 2vw;
+  border: 3px solid var(--white);
+  border-radius: 50%;
+}
+.top, .bottom {
+  left: 1.563vw;
+}
+.left, .right {
+  top: 1.563vw;
+}
+.bottom {
+  top: 3.125vw;
+}
+.right {
+  left: 3.125vw;
+}
+.center {
+  top: 1.563vw;
+  left: 1.563vw;
+  background: var(--pink);
+}
+.hide {
+  display: none;
 }
 .forma {
   position: absolute;
@@ -136,187 +161,172 @@ span {
   background-repeat: no-repeat;
 }
 .shapes div:nth-of-type(1) {
-  top: 10vw;
-  left: 10vw;
+  top: 10%;
+  left: 10%;
 }
 .shapes div:nth-of-type(2) {
-  top: 5vw;
-  left: 15vw;
+  top: 5%;
+  left: 15%;
 }
 .shapes div:nth-of-type(3) {
-  top: 12vw;
-  left: 8vw;
+  top: 12%;
+  left: 8%;
 }
 .shapes div:nth-of-type(4) {
-  top: 12vw;
-  left: 8vw;
+  top: 12%;
+  left: 8%;
 }
 .shapes div:nth-of-type(5) {
-  top: 15vw;
-  left: 84vw;
+  top: 15%;
+  left: 84%;
 }
 .shapes div:nth-of-type(6) {
-  top: 12vw;
-  left: 45vw;
+  top: 12%;
+  left: 45%;
 }
 .shapes div:nth-of-type(7) {
-  top: 12vw;
-  left: 11vw;
+  top: 12%;
+  left: 11%;
 }
 .shapes div:nth-of-type(8) {
-  top: 8vw;
-  left: 9vw;
+  top: 8%;
+  left: 9%;
 }
 .shapes div:nth-of-type(9) {
-  top: 20vw;
-  left: 15vw;
+  top: 20%;
+  left: 15%;
 }
 .shapes div:nth-of-type(10) {
-  top: 22vw;
-  left: 6vw;
+  top: 22%;
+  left: 6%;
 }
 .shapes div:nth-of-type(11) {
-  top: 43vw;
-  left: 4vw;
+  top: 43%;
+  left: 4%;
 }
 .shapes div:nth-of-type(12) {
-  top: 25vw;
-  left: 14vw;
+  top: 25%;
+  left: 14%;
 }
 .shapes div:nth-of-type(13) {
-  top: 45vw;
-  left: 33vw;
+  top: 45%;
+  left: 33%;
 }
 .shapes div:nth-of-type(14) {
-  top: 47vw;
-  left: 10vw;
+  top: 47%;
+  left: 10%;
 }
 .shapes div:nth-of-type(15) {
-  top: 61vw;
-  left: 50vw;
+  top: 61%;
+  left: 50%;
 }
 .shapes div:nth-of-type(16) {
-  top: 22vw;
-  left: 55vw;
+  top: 22%;
+  left: 55%;
 }
 .shapes div:nth-of-type(17) {
-  top: 17vw;
-  left: 60vw;
+  top: 17%;
+  left: 60%;
 }
 .shapes div:nth-of-type(18) {
-  top: 25vw;
-  left: 45vw;
+  top: 25%;
+  left: 45%;
 }
 .shapes div:nth-of-type(19) {
-  top: 14vw;
-  left: 58vw;
+  top: 14%;
+  left: 58%;
 }
 .shapes div:nth-of-type(19) {
-  top: 14vw;
-  left: 58vw;
+  top: 14%;
+  left: 58%;
 }
 .shapes div:nth-of-type(19) {
-  top: 14vw;
-  left: 58vw;
+  top: 14%;
+  left: 58%;
 }
 .shapes div:nth-of-type(20) {
-  top: 18vw;
-  left: 68vw;
+  top: 18%;
+  left: 68%;
 }
 .shapes div:nth-of-type(21) {
-  top: 28vw;
-  left: 36vw;
+  top: 28%;
+  left: 36%;
 }
 .shapes div:nth-of-type(22) {
-  top: 34vw;
-  left: 42vw;
+  top: 34%;
+  left: 42%;
 }
 .shapes div:nth-of-type(23) {
-  top: 46vw;
-  left: 37vw;
+  top: 46%;
+  left: 37%;
 }
 .shapes div:nth-of-type(24) {
-  top: 19vw;
-  left: 89vw;
+  top: 19%;
+  left: 89%;
 }
 .shapes div:nth-of-type(25) {
-  top: 46vw;
-  left: 78vw;
+  top: 46%;
+  left: 78%;
 }
 .shapes div:nth-of-type(26) {
-  top: 16vw;
-  left: 15vw;
+  top: 16%;
+  left: 15%;
 }
 .shapes div:nth-of-type(27) {
-  top: 25vw;
-  left: 70vw;
+  top: 25%;
+  left: 70%;
 }
 .shapes div:nth-of-type(28) {
-  top: 30vw;
-  left: 78vw;
+  top: 30%;
+  left: 78%;
 }
 .shapes div:nth-of-type(29) {
-  top: 32vw;
-  left: 48vw;
+  top: 32%;
+  left: 48%;
 }
 .shapes div:nth-of-type(30) {
-  top: 29vw;
-  left: 29vw;
+  top: 29%;
+  left: 29%;
 }
-#screen_1 {
-  position: relative;
-  width: 1920px;
-  height: 1080px;
+.opaque {
+  opacity: 0;
 }
-#screen_2 {
-  position: relative;
-  width: 1920px;
-  height: 1080px;
-  background: url(../img/grid.svg);
-}
-#screen_3 {
+.show {
   display: flex;
   flex-direction: row;
   position: relative;
-  width: 1920px;
-  height: 1080px;
+  width: 100vw;
+  height: 100vh;
   background: url(../img/grid.svg);
 }
-#screen_4 {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  width: 1920px;
-  height: 1080px;
-  background: url(../img/grid.svg);
+.box_fruits {
+  width: 20vw;
 }
-#screen_5 {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  width: 1920px;
-  height: 1080px;
-  background: url(../img/grid.svg);
-}
-#screen_2 h1 {
+.screen_2 h1 {
   position: absolute;
   top: 10%;
   text-align: center;
   animation: heading 10s ease-in-out infinite;
 }
-#screen_3 h1 {
+.screen_3 h1 {
   position: absolute;
   top: 15%;
   text-align: center;
   animation: heading 10s ease-in-out infinite;
 }
-#screen_4 h1 {
+.screen_3 h2 {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+
+}
+.screen_4 h1 {
   position: absolute;
   top: 15%;
   text-align: center;
   animation: heading 10s ease-in-out infinite;
 }
-#screen_5 h1 {
+.screen_5 h1 {
   position: absolute;
   top: 15%;
   text-align: center;
