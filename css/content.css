@@ -34,9 +34,9 @@ body {
   height: 100vh;
   background: var(--blue);
 }
-.scene {
+/* .scene {
   width: 100vw;
-}
+} */
 .scene > div {
   position: absolute;
   bottom: 0;
