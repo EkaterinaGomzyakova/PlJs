@@ -9,11 +9,11 @@ article > * { width: calc(100% - 40px); }
 
 @media all and (max-width: 320px) {
   h1 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   .menu {
-    width: 10vw;
-    height: 10vw;
+    width: 20vw;
+    height: 20vw;
   }
 
 
