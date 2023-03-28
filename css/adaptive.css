@@ -14,11 +14,13 @@ article > * { width: calc(100% - 40px); }
   .menu {
     width: 9vw;
     height: 9vw;
-
   }
   .top, .right, .bottom, .left, .center {
     position: absolute;
     width: 4vw;
     height: 4vw;
-
-}
+  }
+  .object {
+    top: 15%;
+    left: 15%;
+  }

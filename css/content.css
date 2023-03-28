@@ -89,14 +89,14 @@ h1 {
 h2 {
   font-family: 'IBM Plex Mono';
   font-weight: 400;
-  font-size: 40px;
+  font-size: 2rem;
   text-transform: uppercase;
   color: var(--white);
 }
 p {
   font-family: 'IBM Plex Mono';
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 body {
   background: var(--blue);
@@ -142,10 +142,13 @@ body {
 }
 .bulb {
   width: 40vw;
+  height: 71vw;
   z-index: 5;
 }
 .object {
   position: absolute;
+  width: 10vw;
+  height: 20vw;
   top: 30%;
   left: 30%;
 }
