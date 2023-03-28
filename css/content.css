@@ -120,7 +120,7 @@ body {
   width: 100%;
 }
 .flowers3 {
-  width: 100%;
+  width: 50%;
 }
 .flowers4 {
   width: 100%;
@@ -141,8 +141,8 @@ body {
   z-index: 5;
 }
 .bulb {
-  width: 40vw;
-  height: 71vw;
+  width: 60vw;
+  height: 60vw;
   z-index: 5;
 }
 .object {
