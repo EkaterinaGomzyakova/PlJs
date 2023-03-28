@@ -12,9 +12,13 @@ article > * { width: calc(100% - 40px); }
     font-size: 4rem;
   }
   .menu {
-    width: 20vw;
-    height: 20vw;
-  }
+    width: 9vw;
+    height: 9vw;
 
+  }
+  .top, .right, .bottom, .left, .center {
+    position: absolute;
+    width: 4vw;
+    height: 4vw;
 
 }
