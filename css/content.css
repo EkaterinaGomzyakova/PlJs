@@ -210,26 +210,26 @@ p {
   border-radius: 50%;
 }
 .top, .bottom {
-  left: 1.563vw;
+  left: 1.5vw;
 }
 .left, .right {
-  top: 1.563vw;
+  top: 1.5vw;
 }
 .bottom {
-  top: 3.125vw;
+  top: 3vw;
 }
 .right {
-  left: 3.125vw;
+  left: 3vw;
 }
 .center {
-  top: 1.563vw;
-  left: 1.563vw;
+  top: 1.5vw;
+  left: 1.5vw;
   background: var(--pink);
 }
 .forma {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 5.208vw;
+  height: 5.208vw;
   z-index: 5;
   background-image: url(../img/flowers2.png);
   background-size: cover;
@@ -400,8 +400,8 @@ p {
 }
 .screen_3 h2 {
   position: absolute;
-  top: 15%;
-  left: 10%;
+  top: 30%;
+  left: 60%;
 }
 .screen_4 h1 {
   position: absolute;
