@@ -7,7 +7,7 @@ article > * { width: calc(100% - 40px); }
 
 }
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 414px) {
   h1 {
     font-size: 4rem;
   }
