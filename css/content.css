@@ -17,10 +17,8 @@ h1 {
   font-weight: 500;
   font-size: 7.8rem;
   color: var(--white);
+  max-width: 90vw;
 }
-
-
-
 @keyframes typing {
   0%, 27% { content: ""; }
   1%, 26% { content: "ф"; }
@@ -103,6 +101,9 @@ p {
 body {
   background: var(--blue);
   background-image: url(../img/grid.svg);
+  background-size: center;
+  background-repeat: no-repeat;
+
 }
 .scene {
   width: 100vw;
