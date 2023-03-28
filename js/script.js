@@ -29,13 +29,14 @@ $(document).ready(function(){
   });
 // ИЗМЕНЕНИЕ ЦВЕТА
   $(".r, .g, .b").on('input', function(){
-    var r = $(".r").val();
-    var g = $(".g").val();
-    var b = $(".b").val();
+    let r = $(".r").val();
+    let g = $(".g").val();
+    let b = $(".b").val();
 
     $(".plant").css("fill", "rgb("+r+","+g+","+b+")");
     $(".rgb-val").val( "rgb("+r+","+g+","+b+")");
   });
+
 
 // ПАРАЛЛАКС
   $(window).on('mousemove', function(e) {
@@ -74,18 +75,4 @@ $(document).ready(function(){
         $(this).css('background-image', bg3);
     }
     });
-    });
-    // ИЗМЕНЕНИЕ ТЕКСТА НА ПЕРВОМ ЭКРАНЕ
-$(document).ready(function(){
-    setTimeout(function() {
-     $('textPath').html('Проводим эксперименты с цветом')
- }, 3000);
-
- setTimeout(function() {
-  $('textPath').html('Проводим эксперименты с формой')
-}, 6000);
-
-setTimeout(function() {
- $('textPath').html('Сохраняем новые образцы')
-}, 9000);
     });

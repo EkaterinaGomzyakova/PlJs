@@ -14,8 +14,78 @@ cursor: crosshair;
 h1 {
   font-family: 'IBM Plex Mono', monospace;
   font-weight: 500;
-  font-size: 128px;
+  font-size: 7.8rem;
   color: var(--white);
+}
+
+
+
+@keyframes typing {
+  0%, 27% { content: ""; }
+  1%, 26% { content: "ф"; }
+  2%, 25% { content: "фо"; }
+  3%, 23% { content: "фор"; }
+  4%, 22% { content: "форм"; }
+  5%, 21% { content: "формо"; }
+  6%, 20% { content: "формой"; }
+  7%, 19% { content: "формой2"; }
+  9%, 18% { content: "формой21"; }
+  10%, 17% { content: "формой213"; }
+
+  30%, 51% { content: ""; }
+  31%, 50% { content: "ц"; }
+  33%, 49% { content: "цв"; }
+  34%, 47% { content: "цве"; }
+  35%, 46% { content: "цвет"; }
+  36%, 45% { content: "цвето"; }
+  37%, 44% { content: "цветом"; }
+
+  54%, 75% { content: ""; }
+  55%, 74% { content: "ц"; }
+  56%, 72% { content: "цв"; }
+  58%, 71% { content: "цве"; }
+  59%, 70% { content: "цвет"; }
+  60%, 69% { content: "цветом"; }
+  61%, 68% { content: "цветом1"; }
+
+  78%, 96% { content: ""; }
+  79%, 95% { content: "ц"; }
+  80%, 94% { content: "цв"; }
+  82%, 93% { content: "цве"; }
+  83%, 92% { content: "цвет"; }
+  84%, 91% { content: "цвето"; }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.typewriter {
+  --caret: currentcolor;
+}
+.typewriter::before {
+  content: "";
+  animation: typing 13.5s infinite;
+}
+.typewriter::after {
+  content: "";
+  border-right: 3px solid var(--caret);
+  animation: blink 0.5s linear infinite;
+}
+@media (prefers-reduced-motion) {
+  .typewriter::after {
+    animation: none;
+  }
+  @keyframes sequencePopup {
+    0%, 100% { content: "формой2"; }
+    25% { content: "синтезом"; }
+    50% { content: "цветом"; }
+    75% { content: "формой"; }
+  }
+
+  .typewriter::before {
+    content: "формой";
+    animation: sequencePopup 12s linear infinite;
+  }
 }
 h2 {
   font-family: 'IBM Plex Mono';
@@ -27,20 +97,19 @@ h2 {
 p {
   font-family: 'IBM Plex Mono';
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.3rem;
 }
 body {
-  width: 100%;
-  height: 100vh;
   background: var(--blue);
+  background-image: url(../img/grid.svg);
 }
 .scene {
   width: 100vw;
+  height: 70vh;
 }
 .scene > div {
   position: absolute;
   bottom: 0;
-  width: 100vw;
 }
 .flowers1 {
   width: 100%;
@@ -132,7 +201,7 @@ p {
   position: absolute;
   width: 2vw;
   height: 2vw;
-  border: 3px solid var(--white);
+  border: 0.156vw solid var(--white);
   border-radius: 50%;
 }
 .top, .bottom {
@@ -152,9 +221,6 @@ p {
   left: 1.563vw;
   background: var(--pink);
 }
-/* .hide {
-  display: none;
-} */
 .forma {
   position: absolute;
   width: 100px;
@@ -295,24 +361,22 @@ p {
 .opaque {
   opacity: 0;
 }
-/* .show {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background: url(../img/grid.svg);
-} */
 .box_fruits {
   width: 20vw;
 }
-.screen_1, .screen_2, .screen_3, .screen_4, .screen_5 {
+.screen_1 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100vw;
+  /* height: 100vh; */
+}
+.screen_2, .screen_3, .screen_4, .screen_5 {
   display: flex;
   flex-direction: row;
   position: relative;
   width: 100vw;
-  height: 100vh;
-  background: url(../img/grid.svg);
+  /* height: 100vh; */
 }
 .screen_2 h1 {
   position: absolute;
@@ -330,7 +394,6 @@ p {
   position: absolute;
   top: 15%;
   left: 10%;
-
 }
 .screen_4 h1 {
   position: absolute;
