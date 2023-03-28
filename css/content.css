@@ -380,6 +380,9 @@ p {
   width: 100vw;
   /* height: 100vh; */
 }
+.screen_1 h1 {
+  margin-left: 3vw;
+}
 .screen_2 h1 {
   position: absolute;
   top: 10%;
