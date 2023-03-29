@@ -40,3 +40,10 @@ article > * { width: calc(100% - 40px); }
     top: 15%;
     left: 15%;
   }
+  .screen_3 {
+    flex-direction: column;
+  }
+.container {
+  width: 60vw;
+  margin: 0 auto;
+}

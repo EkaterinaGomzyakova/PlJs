@@ -28,15 +28,18 @@ $(document).ready(function(){
     $(".screen_1").show();
   });
 // ИЗМЕНЕНИЕ ЦВЕТА
-  $(".r, .g, .b").on('input', function(){
-    let r = $(".r").val();
-    let g = $(".g").val();
-    let b = $(".b").val();
-
-    $(".plant").css("fill", "rgb("+r+","+g+","+b+")");
-    $(".rgb-val").val( "rgb("+r+","+g+","+b+")");
-  });
-
+  // $(".r, .g, .b").on('input', function(){
+  //   let r = $(".r").val();
+  //   let g = $(".g").val();
+  //   let b = $(".b").val();
+  //
+  //   $(".plant").css("fill", "rgb("+r+","+g+","+b+")");
+  //   $(".rgb-val").val( "rgb("+r+","+g+","+b+")");
+  // });
+  // ПЕРЕТАСКИВАНИЕ
+$(function() {
+  $(".object" ).draggable();
+} );
 
 // ПАРАЛЛАКС
   $(window).on('mousemove', function(e) {
@@ -75,4 +78,54 @@ $(document).ready(function(){
         $(this).css('background-image', bg3);
     }
     });
+    });
+
+    $(document).ready(function(){
+      $("div.button>span:nth-child(1)").click(function() {
+      var varColor = ["green","red","blue","yellow"];
+      var hasClass;
+
+      for (var i = 0; i<=3; i++) {
+        if (hasClass = $(".container>div>div").hasClass(varColor[i]) ) {
+          $(".container>div>div").removeClass(varColor[i]);
+        }
+      }
+      $(".container>div>div").addClass("green");
+    });
+
+    $("div.button>span:nth-child(2)").click(function() {
+    var varColor = ["green","red","blue","yellow"];
+    var hasClass;
+
+    for (var i = 0; i<=3; i++) {
+      if (hasClass = $(".container>div>div").hasClass(varColor[i]) ) {
+        $(".container>div>div").removeClass(varColor[i]);
+      }
+    }
+    $(".container>div>div").addClass("red");
+  });
+
+  $("div.button>span:nth-child(3)").click(function() {
+  var varColor = ["green","red","blue","yellow"];
+  var hasClass;
+
+  for (var i = 0; i<=3; i++) {
+    if (hasClass = $(".container>div>div").hasClass(varColor[i]) ) {
+      $(".container>div>div").removeClass(varColor[i]);
+    }
+  }
+  $(".container>div>div").addClass("blue");
+});
+
+$("div.button>span:nth-child(4)").click(function() {
+var varColor = ["green","red","blue","yellow"];
+var hasClass;
+
+for (var i = 0; i<=3; i++) {
+  if (hasClass = $(".container>div>div").hasClass(varColor[i]) ) {
+    $(".container>div>div").removeClass(varColor[i]);
+  }
+}
+$(".container>div>div").addClass("yellow");
+});
     });
