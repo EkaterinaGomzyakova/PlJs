@@ -1,5 +1,14 @@
 // ИЗМЕНЕНИЕ ЦВЕТА задать размер div и изображениям на главном экране. для плавного изменения применить для класса opacity: 0 и opacity:1 и в классах show и hide, и прописать Keyframes с transition,  textpath можно переместить в text/ можно через show и hide, но для плавного перехода нужен отдельный класс и keyframes, с transition  и opacity  0 1, через метод css animation play-state: running
 $(document).ready(function(){
+
+  function setRoundWidth() {
+        const screen_1 = $('.screen_1')
+        const newWidth = Math.floor(document.documentElement.clientWidth / 75) * 75 - 50 - 25
+        screen_1.style.width = newWidth + 'px'
+      }
+      setRoundWidth()
+      window.addEventListener('resize', setRoundWidth)
+
 // СКРЫТЬ ЭКРАНЫ КРОМЕ ПЕРВОГО ПРИ ЗАГРУЗКЕ
   $(".screen_2, .screen_3, .screen_4, .screen_5").hide();
 // ПЕРЕХОД МЕЖДУ ЭКРАНАМИ

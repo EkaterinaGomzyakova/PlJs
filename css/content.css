@@ -100,7 +100,7 @@ p {
 }
 body {
   background: var(--blue);
-  background-image: url(../img/grid.svg);
+  /* background-image: url(../img/grid.svg); */
   background-size: center;
   background-repeat: no-repeat;
 
@@ -370,11 +370,25 @@ p {
   width: 20vw;
 }
 .screen_1 {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   position: relative;
   width: 100vw;
-  /* height: 100vh; */
+  /* height: 100vh; */ */
+
+
+     position: relative;
+     height: 100%;
+     margin: auto;
+     /* border: 25px solid #fff; */
+     outline: 1px solid #fff;
+     outline-offset: -26px;
+     background:
+       linear-gradient(to top, #fff 1px, transparent 1px)
+       repeat 0 0 / 100% 75px,
+       linear-gradient(to right, #fff 1px, transparent 1px)
+       repeat 0 0 / 75px 100%;
+
 }
 .screen_2, .screen_3, .screen_4, .screen_5 {
   display: flex;
@@ -482,6 +496,61 @@ div>.button>span:nth-child(4) {
 .yellow {
   box-shadow: 0 0 0 155px yellow;
   mix-blend-mode: hue;
+}
+.parallax-viewport {
+    position: relative;     /* relative, absolute, fixed */
+    overflow: hidden;
+}
+.parallax-layer {
+    position: absolute;
+}
+#wrapper {
+	        width: 60em;
+	    }
+
+	    .button {
+	        background: #2f3134;
+	        float: left;
+	        position: relative;
+	        width: 60px; height: 60px;
+	        margin: 3.2em 3.2em 0 0;
+	    }
+
+	    #viewport {
+	        float: left; position: relative; background: #2f3134;
+	        width: 60px; height: 60px; margin: 6.4em 3.2em 0 2.4em;
+	        -webkit-border-radius: 12px;
+	        -moz-border-radius: 12px;
+	        border-radius: 12px;
+	    }
+
+	    #mouseport {
+	        float: left; position: relative; background: #2f3134;
+	        width: 60px; height: 60px; margin: 6.4em 3.2em 0 0;
+	        -webkit-border-radius: 12px;
+	        -moz-border-radius: 12px;
+	        border-radius: 12px;
+	    }
+
+	    .layer_1 { position: absolute; width: 45px; height: 45px; z-index: 101; }
+	    .layer_2 { position: absolute; width: 48px; height: 48px; z-index: 102; }
+	    .layer_3 { position: absolute; width: 52px; height: 52px; z-index: 103; }
+	    .layer_4 { position: absolute; width: 58px; height: 58px; z-index: 104; }
+	    .layer_5 { position: absolute; width: 67px; height: 67px; z-index: 105; }
+	    .layer_6 { position: absolute; width: 80px; height: 80px; z-index: 106; }
+
+	    .tl, .tr, .bl, .br {
+	        width: 11px; height: 11px;
+	    }
+
+	    .tl { background: url('../images/corner_dark_tl.png'); }
+	    .tr { background: url('../images/corner_dark_tr.png'); }
+	    .bl { background: url('../images/corner_dark_bl.png'); }
+	    .br { background: url('../images/corner_dark_br.png'); }
+
+.watermelon {
+  width: 5vw;
+  height: 5vw;
 }
 @keyframes heading {
   0% {right: 0;}
