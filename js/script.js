@@ -36,15 +36,7 @@ $(document).ready(function(){
     $(".screen_2, .screen_3, .screen_4, .screen_5").hide();
     $(".screen_1").show();
   });
-// ИЗМЕНЕНИЕ ЦВЕТА
-  // $(".r, .g, .b").on('input', function(){
-  //   let r = $(".r").val();
-  //   let g = $(".g").val();
-  //   let b = $(".b").val();
-  //
-  //   $(".plant").css("fill", "rgb("+r+","+g+","+b+")");
-  //   $(".rgb-val").val( "rgb("+r+","+g+","+b+")");
-  // });
+
   // ПЕРЕТАСКИВАНИЕ
 $(function() {
   $(".object" ).draggable();
@@ -69,31 +61,19 @@ $(function() {
     })
 })
 });
-// ЗАМЕНА ФОНА
-  // $(document).click(function() {
-  //     let bg0 = "url('img/flowers1.png')";
-  //     let bg1 = "url('img/flowers1.png')";
-  //     let bg2 = "url('img/flowers2.png')";
-  //     let bg3 = "url('img/flowers1.png')";
-  //
-  //     let count = 0;
-  //     $('.forma').click(function () {
-  //       count += 1;
-  //       if (count == 1) {
-  //       $(this).css('background-image', bg1);
-  //     } else if (count == 2) {
-  //       $(this).css('background-image', bg2);
-  //     } else if (count == 3) {
-  //       $(this).css('background-image', bg3);
-  //   }
-  //   });
-  //   });
 
   $(document).ready(function(){
+          // ПО КЛИКУ НА ПЕРВОЕ РАСТЕНИЕ ОНО ОСТАНАВЛИВАЕТСЯ
           $(".frame").click(function(){
               $(".frame").toggleClass("stop");
           });
+          // ДЛЯ ВТОРОГО РАСТЕНИЯ
+          $(".frame_2").click(function(){
+              $(".frame_2").toggleClass("stop");
+          });
       });
+
+      // ИЗМЕНЕНИЕ ЦВЕТА // ЗЕЛЕНЫЙ
     $(document).ready(function(){
       $("div.button>span:nth-child(1)").click(function() {
       var varColor = ["green","red","blue","yellow"];
@@ -107,6 +87,7 @@ $(function() {
       $(".container>div>div").addClass("green");
     });
 
+    // КРАСНЫЙ
     $("div.button>span:nth-child(2)").click(function() {
     var varColor = ["green","red","blue","yellow"];
     var hasClass;
@@ -119,6 +100,7 @@ $(function() {
     $(".container>div>div").addClass("red");
   });
 
+  // СИНИЙ
   $("div.button>span:nth-child(3)").click(function() {
   var varColor = ["green","red","blue","yellow"];
   var hasClass;
@@ -131,6 +113,7 @@ $(function() {
   $(".container>div>div").addClass("blue");
 });
 
+// ЖЕЛТЫЙ
 $("div.button>span:nth-child(4)").click(function() {
 var varColor = ["green","red","blue","yellow"];
 var hasClass;
@@ -142,4 +125,35 @@ for (var i = 0; i<=3; i++) {
 }
 $(".container>div>div").addClass("yellow");
 });
+    });
+
+    $(document).mousemove(function(e) {
+      let body_size_x = $( window ).width();
+      let body_size_y = $( window ).height();
+      let half_body_size_x = parseInt(body_size_x / 2);
+      let half_body_size_y = parseInt(body_size_y / 2);
+      let left_dir = e.pageX;
+      let top_dir = e.pageY;
+      let eq1 = left_dir < half_body_size_x;
+      let eq2 = left_dir > half_body_size_x;
+      let eq3 = top_dir < half_body_size_y;
+      let eq4 = top_dir > half_body_size_y;
+      let bg0 = "url('../img/left_light.png')";
+      let bg1 = "url('img/right_light.png')";
+      let bg2 = "url('../img/left_bottom_light.png')";
+      let bg3 = "url('img/right_bottom_light.png')";
+
+
+      $('#body').html(half_body_size_x + ' + ' + half_body_size_y);
+      $('#top').html(top_dir);
+      $('#left').html(left_dir);
+      if (eq1 && eq3) {
+        $('#box').css('background-image', bg0);
+      } else if (eq1 && eq4) {
+        $('#box').css('background-image', bg3);
+      } else if (eq2 && eq3) {
+        $('#box').css('background-image', bg1);
+      } else if (eq2 && eq4) {
+        $('#box').css('background-image', bg2);
+      }
     });

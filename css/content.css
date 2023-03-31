@@ -74,17 +74,6 @@ h1 {
   .typewriter::after {
     animation: none;
   }
-  /* @keyframes sequencePopup {
-    0%, 100% { content: "формой2"; }
-    25% { content: "синтезом"; }
-    50% { content: "цветом"; }
-    75% { content: "формой"; }
-  } */
-
-  /* .typewriter::before {
-    content: "формой";
-    animation: sequencePopup 12s linear infinite;
-  } */
 }
 h2 {
   font-family: 'IBM Plex Mono';
@@ -100,10 +89,8 @@ p {
 }
 body {
   background: var(--blue);
-  /* background-image: url(../img/grid.svg); */
   background-size: center;
   background-repeat: no-repeat;
-
 }
 .scene {
   width: 100vw;
@@ -152,44 +139,6 @@ body {
   top: 30%;
   left: 30%;
 }
-/* .container1{
-  display: flex;
-  flex-direction: row; */
-  /* width: 40vw;
-  margin: 25% 15%;
-  height: 500px;
-}
-.rgb-slider{
-  width: 42%;
-  margin: 10%;
-  padding: 40px;
-  box-sizing: border-box;
-  background: var(--pink);
-}
-.show-color{
-  width: 30%;
-  height: 200px;
-  border: 3px solid var(--blue);
-  margin: 10%;
-  box-sizing: border-box;
-  background: var(--white);
-}
-
-.color-value{
-  width:95%;
-  margin:10px auto;
-  text-align: center;
-  border:1px solid var(--blue);
-  clear: both;
-  background: black;
-  padding: 30px;
-  box-sizing: border-box;
-}
-input[type="range"]{
-  width: 80%;
-  margin: auto;
-  height: 30px;
-} */
 p {
   font-size: 30px;
   color: rgb(251, 251, 251);
@@ -518,8 +467,8 @@ div>.button>span:nth-child(4) {
 }
 .caption {
   position: absolute;
-  left: 8vw;
   top: 12vw;
+  left: 8vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -529,7 +478,20 @@ div>.button>span:nth-child(4) {
   border: 3px solid var(--white);
   border-radius: 2vw;
 }
-
+.tomato {
+  top: 12vw;
+  left: 20vw;
+}
+#box {
+  width: 500px;
+  height:500px;
+  left: calc(50% - 100px);
+  top: 100px;
+  background-image: url("../img/left_light.png");
+  background-size: 100% auto;
+  position: relative;
+  display: block;
+}
 @keyframes heading {
   0% {right: 0;}
   50% {right: 100%;}
