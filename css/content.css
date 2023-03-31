@@ -195,9 +195,8 @@ p {
 .box_fruits {
   width: 20vw;
 }
-.screen_1 {
-  position: relative;
-  height: 100%;
+.grid {
+  height: 100vh;
   margin: auto;
   border: 25px solid var(--blue);
   border-radius: 3rem;
@@ -208,22 +207,12 @@ p {
    repeat 0 0 / 100% 75px,
    linear-gradient(to right, #fff 1px, transparent 1px)
    repeat 0 0 / 75px 100%;
+
 }
 .screen_2, .screen_3, .screen_4, .screen_5 {
   display: flex;
   flex-direction: row;
   position: relative;
-  height: 100%;
-  margin: auto;
-  border: 25px solid var(--blue);
-  border-radius: 3rem;
-  outline: 1px solid #fff;
-  outline-offset: -26px;
-  background:
-    linear-gradient(to top, #fff 1px, transparent 1px)
-    repeat 0 0 / 100% 75px,
-    linear-gradient(to right, #fff 1px, transparent 1px)
-    repeat 0 0 / 75px 100%;
 }
 .screen_5 {
   overflow: hidden;
@@ -244,9 +233,8 @@ p {
   animation: heading 10s ease-in-out infinite;
 }
 .screen_3 h2 {
-  position: absolute;
-  top: 30%;
-  left: 60%;
+  position: relative;
+  margin: 5vw;
 }
 .screen_4 h1 {
   position: absolute;
