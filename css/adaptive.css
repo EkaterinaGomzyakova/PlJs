@@ -11,6 +11,9 @@ article > * { width: calc(100% - 40px); }
   h1 {
     font-size: 4rem;
   }
+  p {
+    font-size:0.5rem;
+  }
   .menu {
     width: 11vw;
     height: 11vw;

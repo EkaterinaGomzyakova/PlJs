@@ -43,29 +43,39 @@
 
     </section>
 
-    <section class="screen_2 hide">
+    <section class="screen_2">
       <h1 class="fill">синтез растений</h1>
       <img class="box_fruits" src="img/box_fruits.svg">
-      <img class="watermelon" src="img/watermelon.png" alt="">
+      <!-- <img class="watermelon" src="img/watermelon.png" alt=""> -->
       <img class="spring_pink" src="img/spring_pink.png">
       <h1 class="outline">синтез растений</h1>
+
+
+
+<svg class="synt_path" width="100vw" height="90vh" viewBox="0 0 500 1080">
+ <path id="motionPath" fill="none" stroke="#000000" stroke-miterlimit="10" d="M324.5 1C224.333 20.8333 21.3 77 10.5 143C10.5 229 398.5 261 397 347C395.5 433 10.5 465 10.5 549.5C10.5 634 407 618.5 407 720C407 821.5 0.5 897.5 0.5 939.5C0.5 981.5 397 996.5 397 1076"/>
+
+ <circle id="circle" r="20" cx="0" cy="0" fill="var(--pink)" />
+
+ <animateMotion
+          xlink:href="#circle"
+          dur="5s"
+          begin="0s"
+          fill="freeze"
+          repeatCount="indefinite">
+   <mpath xlink:href="#motionPath" />
+ </animateMotion>
+</svg>
+
+
     </section>
 
-    <section class="screen_3 hide">
+    <section class="screen_3">
       <h1 class="fill">цвет</h1>
       <img class="bulb" src="img/bulb.png">
       <img class="plant" src="img/flowers1.png">
       <h1 class="outline">цвет</h1>
       <h2>Выбери цвета для растения</h2>
-
-      <!-- <div class="container1">
-        <div class="rgb-slider">
-          <p>Красный:</p> <input type="range" max="255" min="0" step="1" class="r"><br>
-          <p>Зелёный:</p> <input type="range" max="255" min="0" step="1" class="g"><br>
-          <p>Синий:</p> <input type="range" max="255" min="0" step="1" class="b"><br>
-        </div>
-      </div> -->
-
       <div class="container">
         <div>
           <img src="img/flowers_bg.png">
@@ -78,65 +88,24 @@
           <span></span>
         </div>
       </div>
-
     </section>
-
-    <section class="screen_4 hide">
+    <!-- ФОРМА, ЭКРАН 4 -->
+    <section class="screen_4">
       <h1 class="fill">форма</h1>
       <h1 class="outline">форма</h1>
-      <div class="shapes">
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
-        <div class="forma"></div>
+      <div class="frame"></div>
+      <div class="caption">
+        <p>Арбуз</p>
+      </div>
+      <div class="frame_2"></div>
+      <div class="caption">
+        <p>Арбуз</p>
       </div>
     </section>
-
-    <section class="screen_5 hide">
+    <!-- БИБЛИОТЕКА ОБРАЗЦОВ, ЭКРАН 5 -->
+    <section class="screen_5">
       <h1 class="fill">библиотека образцов</h1>
       <h1 class="outline">библиотека образцов</h1>
-
-
-      <div id="wrapper" class="clear">
-			<div id="viewport">
-				<!-- Parallax layers -->
-				<img src="http://stephen.band/jparallax/images/parallax_button/1.png" alt="" class="layer_1" style="top: 50%; margin-top: -23.2828px; left: 50%; margin-left: -22.8422px;">
-				<img src="http://stephen.band/jparallax/images/parallax_button/2.png" style="top: 50%; margin-top: -25.5656px; left: 50%; margin-left: -24.6844px;">
-				<img src="http://stephen.band/jparallax/images/parallax_button/3.png" style="top: 50%; margin-top: -29.9141px; left: 50%; margin-left: -27.7109px;">
-				<img src="http://stephen.band/jparallax/images/parallax_button/4.png" style="top: 50%; margin-top: -36.0453px; left: 50%; margin-left: -32.0797px;">
-				<img src="http://stephen.band/jparallax/images/parallax_button/5.png" style="top: 50%; margin-top: -44.4594px; left: 50%; margin-left: -38.2906px;">
-				<img src="http://stephen.band/jparallax/images/parallax_button/6.png" alt="" class="layer_6" style="top: 50%; margin-top: -55.6562px; left: 50%; margin-left: -46.8438px;">
-			</div>
-
-			<div id="mouseport"></div>
-		</div>
-
-
     </section>
-
   </body>
 </html>

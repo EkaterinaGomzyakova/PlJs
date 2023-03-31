@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
   function setRoundWidth() {
-        const screen_1 = $('.screen_1')
+        const screen_1 = document.querySelector('.screen_1')
         const newWidth = Math.floor(document.documentElement.clientWidth / 75) * 75 - 50 - 25
         screen_1.style.width = newWidth + 'px'
       }
@@ -70,25 +70,30 @@ $(function() {
 })
 });
 // ЗАМЕНА ФОНА
-  $(document).click(function() {
-      let bg0 = "url('img/flowers1.png')";
-      let bg1 = "url('img/flowers1.png')";
-      let bg2 = "url('img/flowers2.png')";
-      let bg3 = "url('img/flowers1.png')";
+  // $(document).click(function() {
+  //     let bg0 = "url('img/flowers1.png')";
+  //     let bg1 = "url('img/flowers1.png')";
+  //     let bg2 = "url('img/flowers2.png')";
+  //     let bg3 = "url('img/flowers1.png')";
+  //
+  //     let count = 0;
+  //     $('.forma').click(function () {
+  //       count += 1;
+  //       if (count == 1) {
+  //       $(this).css('background-image', bg1);
+  //     } else if (count == 2) {
+  //       $(this).css('background-image', bg2);
+  //     } else if (count == 3) {
+  //       $(this).css('background-image', bg3);
+  //   }
+  //   });
+  //   });
 
-      let count = 0;
-      $('.forma').click(function () {
-        count += 1;
-        if (count == 1) {
-        $(this).css('background-image', bg1);
-      } else if (count == 2) {
-        $(this).css('background-image', bg2);
-      } else if (count == 3) {
-        $(this).css('background-image', bg3);
-    }
-    });
-    });
-
+  $(document).ready(function(){
+          $(".frame").click(function(){
+              $(".frame").toggleClass("stop");
+          });
+      });
     $(document).ready(function(){
       $("div.button>span:nth-child(1)").click(function() {
       var varColor = ["green","red","blue","yellow"];
