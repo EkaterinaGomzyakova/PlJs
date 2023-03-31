@@ -17,19 +17,17 @@ h1 {
   font-weight: 500;
   font-size: 7.8rem;
   color: var(--white);
-  max-width: 85vw;
 }
 @keyframes typing {
   0%, 27% { content: ""; }
-  1%, 26% { content: "ф"; }
-  2%, 25% { content: "фо"; }
-  3%, 23% { content: "фор"; }
-  4%, 22% { content: "форм"; }
-  5%, 21% { content: "формо"; }
-  6%, 20% { content: "формой"; }
-  7%, 19% { content: "формой2"; }
-  9%, 18% { content: "формой21"; }
-  10%, 17% { content: "формой213"; }
+  1%, 26% { content: "с"; }
+  2%, 25% { content: "си"; }
+  3%, 23% { content: "син"; }
+  4%, 22% { content: "синт"; }
+  5%, 21% { content: "синте"; }
+  6%, 20% { content: "синтез"; }
+  7%, 19% { content: "синтезом"; }
+
 
   30%, 51% { content: ""; }
   31%, 50% { content: "ц"; }
@@ -40,12 +38,12 @@ h1 {
   37%, 44% { content: "цветом"; }
 
   54%, 75% { content: ""; }
-  55%, 74% { content: "ц"; }
-  56%, 72% { content: "цв"; }
-  58%, 71% { content: "цве"; }
-  59%, 70% { content: "цвет"; }
-  60%, 69% { content: "цветом"; }
-  61%, 68% { content: "цветом1"; }
+  55%, 74% { content: "ф"; }
+  56%, 72% { content: "фо"; }
+  58%, 71% { content: "фор"; }
+  59%, 70% { content: "форм"; }
+  60%, 69% { content: "формо"; }
+  61%, 68% { content: "формой"; }
 
   78%, 96% { content: ""; }
   79%, 95% { content: "ц"; }
@@ -53,6 +51,7 @@ h1 {
   82%, 93% { content: "цве"; }
   83%, 92% { content: "цвет"; }
   84%, 91% { content: "цвето"; }
+  85%, 90% { content: "цветом"; }
 }
 @keyframes blink {
   0%, 100% { opacity: 1; }
@@ -157,7 +156,7 @@ p {
   position: relative;
   width: 5vw;
   height: 5vw;
-  margin: 1.563vw 0 0 89.583vw;
+  margin: 1vw 0 0 89vw;
 }
 .top, .right, .bottom, .left, .center {
   position: absolute;
@@ -219,6 +218,7 @@ p {
 }
 .screen_1 h1 {
   margin-left: 3vw;
+  max-width: 80vw;
 }
 .screen_2 h1 {
   position: absolute;
@@ -324,16 +324,16 @@ div>.button>span:nth-child(4) {
   z-index: 5;
 }
 .frame {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   background-image: url("../img/sprite_watermelon.png");
   animation: sprite_watermelon 2s steps(1) infinite;
   animation-play-state: running;
   z-index: 2;
 }
 .frame_2 {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   background-image: url("../img/sprite_tomato.png");
   animation: sprite_tomato 2s steps(1) infinite;
   animation-play-state: running;
@@ -401,55 +401,56 @@ div>.button>span:nth-child(4) {
   50% {right: 100%;}
   100% {right: 0;}
 }
+
 @keyframes sprite_watermelon {
-  0% {background-position: -400px;}
-  3% {background-position: -800px;}
-  9% {background-position: -1200px;}
-  12% {background-position: -1600px;}
-  15% {background-position: -2000px;}
-  18% {background-position: -2400px;}
-  21% {background-position: -2800px;}
-  24% {background-position: -3200px;}
-  27% {background-position: -3600px;}
-  30% {background-position: -4000px;}
-  33% {background-position: -4400px;}
-  36% {background-position: -4800px;}
-  39% {background-position: -5200px;}
-  42% {background-position: -5600px;}
-  45% {background-position: -6000px;}
-  48% {background-position: -6400px;}
-  51% {background-position: -6800px;}
-  54% {background-position: -7200px;}
-  57% {background-position: -7600px;}
-  60% {background-position: -8000px;}
-  63% {background-position: -8400px;}
-  66% {background-position: -8800px;}
-  69% {background-position: -9200px;}
-  72% {background-position: -9600px;}
-  75% {background-position: -10000px;}
-  78% {background-position: -10400px;}
-  81% {background-position: -10800px;}
-  84% {background-position: -11200px;}
-  87% {background-position: -11600px;}
-  90% {background-position: -12000px;}
-  93% {background-position: -12400px;}
-  96% {background-position: -12800px;}
-  99% {background-position: -13200px;}
+  0% {background-position: -300px;}
+  3% {background-position: -600px;}
+  9% {background-position: -900px;}
+  12% {background-position: -1200px;}
+  15% {background-position: -1500px;}
+  18% {background-position: -1800px;}
+  21% {background-position: -2100px;}
+  24% {background-position: -2400px;}
+  27% {background-position: -2700px;}
+  30% {background-position: -3000px;}
+  33% {background-position: -3300px;}
+  36% {background-position: -3600px;}
+  39% {background-position: -3900px;}
+  42% {background-position: -4200px;}
+  45% {background-position: -4500px;}
+  48% {background-position: -4800px;}
+  51% {background-position: -5100px;}
+  54% {background-position: -5400px;}
+  57% {background-position: -5700px;}
+  60% {background-position: -6000px;}
+  63% {background-position: -6300px;}
+  66% {background-position: -6600px;}
+  69% {background-position: -6900px;}
+  72% {background-position: -7200px;}
+  75% {background-position: -7500px;}
+  78% {background-position: -7800px;}
+  81% {background-position: -8100px;}
+  84% {background-position: -8400px;}
+  87% {background-position: -8700px;}
+  90% {background-position: -9000px;}
+  93% {background-position: -9300px;}
+  96% {background-position: -9600px;}
+  99% {background-position: -9900px;}
 }
 @keyframes sprite_tomato {
-  0% {background-position: -400px;}
-  12% {background-position: -800px;}
-  18% {background-position: -1200px;}
-  24% {background-position: -1600px;}
-  30% {background-position: -2000px;}
-  36% {background-position: -2400px;}
-  42% {background-position: -2800px;}
-  48% {background-position: -3200px;}
-  54% {background-position: -3600px;}
-  60% {background-position: -4000px;}
-  66% {background-position: -4400px;}
-  72% {background-position: -4800px;}
-  78% {background-position: -5200px;}
-  84% {background-position: -5600px;}
-  90% {background-position: -6000px;}
+  0% {background-position: -300px;}
+  12% {background-position: -600px;}
+  18% {background-position: -900px;}
+  24% {background-position: -1200px;}
+  30% {background-position: -1500px;}
+  36% {background-position: -1800px;}
+  42% {background-position: -2100px;}
+  48% {background-position: -2400px;}
+  54% {background-position: -2700px;}
+  60% {background-position: -3000px;}
+  66% {background-position: -3300px;}
+  72% {background-position: -3600px;}
+  78% {background-position: -3900px;}
+  84% {background-position: -4200px;}
+  90% {background-position: -4500px;}
 }
