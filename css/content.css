@@ -163,6 +163,7 @@ p {
   position: absolute;
   width: 2vw;
   height: 2vw;
+  background: var(--blue);
   border: 0.156vw solid var(--white);
   border-radius: 50%;
 }
@@ -207,7 +208,6 @@ p {
    repeat 0 0 / 100% 75px,
    linear-gradient(to right, #fff 1px, transparent 1px)
    repeat 0 0 / 75px 100%;
-
 }
 .screen_2, .screen_3, .screen_4, .screen_5 {
   display: flex;
