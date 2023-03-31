@@ -31,12 +31,6 @@ $( window ).resize(function() {
     $(".screen_2, .screen_3, .screen_4, .screen_5").hide();
     $(".screen_1").show();
   });
-
-  // ПЕРЕТАСКИВАНИЕ
-$(function() {
-  $(".box_fruits" ).draggable();
-});
-
 // ПАРАЛЛАКС
   $(window).on('mousemove', function(e) {
     let w = $(window).width();
@@ -63,7 +57,6 @@ $(function() {
     $(".frame_2").click(function(){
         $(".frame_2").toggleClass("stop");
     });
-
     // ИЗМЕНЕНИЕ ЦВЕТА // ЗЕЛЕНЫЙ
 
       $("div.button>span:nth-child(1)").click(function() {
