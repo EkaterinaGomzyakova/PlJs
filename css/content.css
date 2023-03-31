@@ -326,6 +326,7 @@ div>.button>span:nth-child(4) {
   background-image: url("../img/sprite_watermelon.png");
   animation: sprite_watermelon 2s steps(1) infinite;
   animation-play-state: running;
+  z-index: 2;
 }
 .frame_2 {
   width: 400px;
@@ -333,6 +334,7 @@ div>.button>span:nth-child(4) {
   background-image: url("../img/sprite_tomato.png");
   animation: sprite_tomato 2s steps(1) infinite;
   animation-play-state: running;
+  z-index: 2;
 }
 .stop {
   animation-play-state: paused;
@@ -349,6 +351,7 @@ div>.button>span:nth-child(4) {
   background: var(--blue);
   border: 3px solid var(--white);
   border-radius: 2vw;
+  z-index: 3;
 }
 .tomato {
   top: 12vw;

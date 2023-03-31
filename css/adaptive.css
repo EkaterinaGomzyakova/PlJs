@@ -19,15 +19,15 @@ article > * { width: calc(100% - 40px); }
   }
 }
 @media all and (max-width: 834px) {
+  .screen_2, .screen_3, .screen_4, .screen_5 {
+    flex-direction: column;
+  }
   p {
     font-size:0.6rem;
   }
 }
 /* IPHONE 8 PLUS*/
 @media all and (max-width: 414px) {
-  .screen_2, .screen_3, .screen_4, .screen_5 {
-    flex-direction: column;
-  }
   h1 {
     font-size: 4rem;
   }
@@ -82,6 +82,9 @@ article > * { width: calc(100% - 40px); }
   }
   .bulb_bottom {
     margin-top: 40vw;
+  }
+  .frame, .frame_2 {
+    margin: 0 auto;
   }
 }
 /* IPHONE SE */
