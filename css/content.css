@@ -357,19 +357,6 @@ div>.button>span:nth-child(4) {
   top: 12vw;
   left: 20vw;
 }
-/* #box {
-  width: 500px;
-  height:500px;
-  left: calc(50% - 100px);
-  top: 100px;
-  background-image: url("../img/left_light.png");
-  background-size: 100% auto;
-  position: relative;
-  display: block;
-} */
-.running {
-
-}
 .running div {
   width: 35vw;
   height: 35vw;
@@ -393,9 +380,16 @@ div>.button>span:nth-child(4) {
   width: 200vw;
   left: 0vw;
   top: 10vw;
-  animation: running 5s infinite linear;
+  animation: horizontal 5s infinite linear;
 }
-@keyframes running {
+.running2 {
+  display: flex;
+  width: 200vw;
+  left: 200vw;
+  top: 10vw;
+  animation: horizontal 5s infinite linear;
+}
+@keyframes horizontal {
   0% {transform: translate(0, 0);}
   100% {transform: translate(-100%, 0);}
 }
