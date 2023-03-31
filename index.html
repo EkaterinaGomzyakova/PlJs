@@ -40,7 +40,6 @@
         <img class="flowers4" src="img/flowers1.png" alt="">
       </div>
     </div>
-
     </section>
 
     <section class="screen_2">
@@ -49,37 +48,36 @@
       <!-- <img class="watermelon" src="img/watermelon.png" alt=""> -->
       <img class="spring_pink" src="img/spring_pink.png">
       <h1 class="outline">синтез растений</h1>
-
-
-
-<svg class="synt_path" width="100vw" height="90vh" viewBox="0 0 500 1080">
- <path id="motionPath" fill="none" stroke="#000000" stroke-miterlimit="10" d="M324.5 1C224.333 20.8333 21.3 77 10.5 143C10.5 229 398.5 261 397 347C395.5 433 10.5 465 10.5 549.5C10.5 634 407 618.5 407 720C407 821.5 0.5 897.5 0.5 939.5C0.5 981.5 397 996.5 397 1076"/>
-
- <circle id="circle" r="20" cx="0" cy="0" fill="var(--pink)" />
-
- <animateMotion
+      <svg class="synt_path" width="100vw" height="90vh" viewBox="0 0 500 1080">
+        <path id="motionPath" fill="none" stroke="#000000" stroke-miterlimit="10" d="M324.5 1C224.333 20.8333 21.3 77 10.5 143C10.5 229 398.5 261 397 347C395.5 433 10.5 465 10.5 549.5C10.5 634 407 618.5 407 720C407 821.5 0.5 897.5 0.5 939.5C0.5 981.5 397 996.5 397 1076"/>
+        <circle id="circle" r="20" cx="0" cy="0" fill="var(--pink)" />
+        <animateMotion
           xlink:href="#circle"
           dur="5s"
           begin="0s"
           fill="freeze"
           repeatCount="indefinite">
-   <mpath xlink:href="#motionPath" />
- </animateMotion>
-</svg>
-
-
+          <mpath xlink:href="#motionPath" />
+        </animateMotion>
+      </svg>
     </section>
-
+    <!-- ЭКРАН 3, ЦВЕТ -->
     <section class="screen_3">
       <h1 class="fill">цвет</h1>
-      <img class="bulb" src="img/bulb.png">
+      <div class="bulb">
+        <img class="bulb_top" src="img/bulb_top.png">
+        <img class="bulb_bottom" src="img/bulb_bottom.png">
+      </div>
+
       <h1 class="outline">цвет</h1>
       <h2>Выбери цвета для растения</h2>
       <div class="container">
         <div>
           <img src="img/flowers_bg.png">
+          <!--ЦВЕТНАЯ ТЕНЬ -->
           <div></div>
         </div>
+        <!-- ВЫБОР ЦВЕТА, КНОПКИ -->
         <div class="button">
           <span></span>
           <span></span>
@@ -112,7 +110,6 @@
         <div class="right_bottom_light"></div>
         <div class="left_bottom_light"></div>
       </div>
-
       <div class="running2">
         <div class="right_light"></div>
         <div class="left_light"></div>
@@ -120,7 +117,6 @@
         <div class="left_bottom_light"></div>
       </div>
       </div>
-
     </section>
   </body>
 </html>
