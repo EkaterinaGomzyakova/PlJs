@@ -121,8 +121,8 @@ body {
 }
 .spring_pink {
   position: absolute;
-  width: 100vw;
-  top: 0;
+  width: 90vw;
+  top: -150px;
   left: 0;
   z-index: 5;
 }

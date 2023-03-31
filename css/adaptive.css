@@ -102,6 +102,16 @@ article > * { width: calc(100% - 40px); }
   .frame, .frame_2 {
     margin: 0 auto;
   }
+  .screen_2 {
+    overflow: hidden;
+  }
+  .spring_pink {
+    position: absolute;
+    width: 300vw;
+    top: -30vw;
+    left: -110vw;
+    z-index: 5;
+  }
 }
 /* IPHONE SE */
 @media all and (max-width: 320px) {

@@ -34,7 +34,7 @@ $( window ).resize(function() {
 
   // ПЕРЕТАСКИВАНИЕ
 $(function() {
-  $(".object" ).draggable();
+  $(".box_fruits" ).draggable();
 });
 
 // ПАРАЛЛАКС
