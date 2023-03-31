@@ -320,6 +320,9 @@ div>.button>span:nth-child(4) {
 .synt_path {
   margin: 0 auto;
 }
+.frame_running {
+  z-index: 5;
+}
 .frame {
   width: 400px;
   height: 400px;

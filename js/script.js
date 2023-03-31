@@ -1,14 +1,9 @@
-// ИЗМЕНЕНИЕ ЦВЕТА задать размер div и изображениям на главном экране. для плавного изменения применить для класса opacity: 0 и opacity:1 и в классах show и hide, и прописать Keyframes с transition,  textpath можно переместить в text/ можно через show и hide, но для плавного перехода нужен отдельный класс и keyframes, с transition  и opacity  0 1, через метод css animation play-state: running
 $(document).ready(function(){
-
-  function setRoundWidth() {
-        const screen_1 = document.querySelector('.screen_1')
-        const newWidth = Math.floor(document.documentElement.clientWidth / 75) * 75 - 50 - 25
-        screen_1.style.width = newWidth + 'px'
-      }
-      setRoundWidth()
-      window.addEventListener('resize', setRoundWidth)
-
+// ИЗМЕНЕНИЕ РАЗМЕРА СЕТКИ ПОД РАЗМЕР ОКНА
+$( window ).resize(function() {
+    const screen_1 = $('.screen_1');
+    const newWidth = Math.floor($( document ).width() / 75) * 75 - 50 - 25;
+});
 // СКРЫТЬ ЭКРАНЫ КРОМЕ ПЕРВОГО ПРИ ЗАГРУЗКЕ
   $(".screen_2, .screen_3, .screen_4, .screen_5").hide();
 // ПЕРЕХОД МЕЖДУ ЭКРАНАМИ
@@ -40,7 +35,7 @@ $(document).ready(function(){
   // ПЕРЕТАСКИВАНИЕ
 $(function() {
   $(".object" ).draggable();
-} );
+});
 
 // ПАРАЛЛАКС
   $(window).on('mousemove', function(e) {
@@ -60,24 +55,20 @@ $(function() {
       })
     })
 })
-});
+    // ПО КЛИКУ НА ПЕРВОЕ РАСТЕНИЕ ОНО ОСТАНАВЛИВАЕТСЯ
+    $(".frame").click(function(){
+        $(".frame").toggleClass("stop");
+    });
+    // ДЛЯ ВТОРОГО РАСТЕНИЯ
+    $(".frame_2").click(function(){
+        $(".frame_2").toggleClass("stop");
+    });
 
-  $(document).ready(function(){
-          // ПО КЛИКУ НА ПЕРВОЕ РАСТЕНИЕ ОНО ОСТАНАВЛИВАЕТСЯ
-          $(".frame").click(function(){
-              $(".frame").toggleClass("stop");
-          });
-          // ДЛЯ ВТОРОГО РАСТЕНИЯ
-          $(".frame_2").click(function(){
-              $(".frame_2").toggleClass("stop");
-          });
-      });
+    // ИЗМЕНЕНИЕ ЦВЕТА // ЗЕЛЕНЫЙ
 
-      // ИЗМЕНЕНИЕ ЦВЕТА // ЗЕЛЕНЫЙ
-    $(document).ready(function(){
       $("div.button>span:nth-child(1)").click(function() {
-      var varColor = ["green","red","blue","yellow"];
-      var hasClass;
+      let varColor = ["green","red","blue","yellow"];
+      let hasClass;
 
       for (var i = 0; i<=3; i++) {
         if (hasClass = $(".container>div>div").hasClass(varColor[i]) ) {
@@ -89,8 +80,8 @@ $(function() {
 
     // КРАСНЫЙ
     $("div.button>span:nth-child(2)").click(function() {
-    var varColor = ["green","red","blue","yellow"];
-    var hasClass;
+    let varColor = ["green","red","blue","yellow"];
+    let hasClass;
 
     for (var i = 0; i<=3; i++) {
       if (hasClass = $(".container>div>div").hasClass(varColor[i]) ) {
@@ -102,8 +93,8 @@ $(function() {
 
   // СИНИЙ
   $("div.button>span:nth-child(3)").click(function() {
-  var varColor = ["green","red","blue","yellow"];
-  var hasClass;
+  let varColor = ["green","red","blue","yellow"];
+  let hasClass;
 
   for (var i = 0; i<=3; i++) {
     if (hasClass = $(".container>div>div").hasClass(varColor[i]) ) {
@@ -115,8 +106,8 @@ $(function() {
 
 // ЖЕЛТЫЙ
 $("div.button>span:nth-child(4)").click(function() {
-var varColor = ["green","red","blue","yellow"];
-var hasClass;
+let varColor = ["green","red","blue","yellow"];
+let hasClass;
 
 for (var i = 0; i<=3; i++) {
   if (hasClass = $(".container>div>div").hasClass(varColor[i]) ) {
@@ -125,4 +116,4 @@ for (var i = 0; i<=3; i++) {
 }
 $(".container>div>div").addClass("yellow");
 });
-    });
+});
